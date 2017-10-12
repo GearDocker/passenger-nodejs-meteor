@@ -10,3 +10,9 @@ RUN useradd -m -G users -s /bin/bash meteor
 USER meteor
 RUN cd /tmp && meteor --version
 
+USER root
+RUN mkdir -p /home/meteor
+WORKDIR /home/meteor
+ADD . ./app
+RUN chown -R meteor:meteor /home/meteor
+
