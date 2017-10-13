@@ -12,7 +12,7 @@ RUN cd /tmp && meteor --version
 
 USER root
 RUN mkdir -p /home/meteor && \
-    mkdir -p /user/src/app && \
+    mkdir -p /usr/src/app && \
     chown -R meteor:meteor /home/meteor && \
     chown -R meteor:meteor /usr/src/app
 
